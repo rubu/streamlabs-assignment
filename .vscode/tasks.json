@@ -33,6 +33,16 @@
                 "cwd": "${workspaceFolder}/twitch-addon"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "configure twitch-addon (windows/x64/debug)",
+            "type": "shell",
+            "command": "cmake-js",
+            "args": ["-D", "configure"],
+            "options": {
+                "cwd": "${workspaceFolder}/twitch-addon"
+            },
+            "problemMatcher": []
         }
     ]
 }

@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>Streamlabs Assignment</title>
+    <style>
+      #setup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    Electron <span id="electron-version"></span>
+    and OBS <span id="obs-version"></span>.
 
+    <div id="setup">
+      <div>
+        <div>Twitch Stream Key</div>
+        <input id="twitch-stream-key" type="text"/>
+        <div>Video Source</div>
+        <select>
+        </select>
+        <div>Audio Source</div>
+        <select>
+        </select>
+      </div>
+    </div>
+    <input type="button" id="start-streaming" value="Start Streaming"/>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>

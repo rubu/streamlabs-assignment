@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "streamlabs-assignment", "streamlabs-assignment.vcxproj", "{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "twitch-addon", "..\twitch-addon\build\twitch-addon.vcxproj", "{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		MinSizeRel|x64 = MinSizeRel|x64
+		MinSizeRel|x86 = MinSizeRel|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+		RelWithDebInfo|x86 = RelWithDebInfo|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Debug|x64.ActiveCfg = Debug|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Debug|x86.ActiveCfg = Debug|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Debug|x86.Build.0 = Debug|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.MinSizeRel|x64.ActiveCfg = Release|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.MinSizeRel|x64.Build.0 = Release|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.MinSizeRel|x86.ActiveCfg = Release|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.MinSizeRel|x86.Build.0 = Release|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Release|x64.ActiveCfg = Release|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Release|x64.Build.0 = Release|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Release|x86.ActiveCfg = Release|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.Release|x86.Build.0 = Release|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{FB1A9A62-BC65-4AE4-84EB-4D68A5BB3939}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.Debug|x64.ActiveCfg = Debug|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.Debug|x64.Build.0 = Debug|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.Debug|x86.ActiveCfg = Debug|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.Release|x64.ActiveCfg = Release|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.Release|x64.Build.0 = Release|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.Release|x86.ActiveCfg = Release|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E361C9A-FA96-420F-869D-1C2016DF3676}
+	EndGlobalSection
+EndGlobal
