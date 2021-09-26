@@ -24,3 +24,4 @@
 # Some general thoughts on electron vs cef directly
 1. much more robust visual studio workflow - the main cef process + all the subprocesses (renderer/gpu/...) can be debugged directly, it is easy to understand what is going wrong if something is not working (in comparison here, it took time to understand which dlls and why are not loaded)
 2. adding a reactive frontend seems easier - in cef scheme/resource handlers can be used to serve assets from disk where they would be watched/genereated by vue/react/something (and bundled inside the binary in release mode) where in this case w/o konwledge of electron it is not exactly clear how to change and hot reload the frontend while the process is running
+3. with raw cef it is possible to inject c++ code into the dom via v8 in the render process as well while https://www.electronjs.org/docs/tutorial/process-model states that native modules can live only in the main process since `require` will not work
