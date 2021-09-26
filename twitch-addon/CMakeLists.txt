@@ -26,4 +26,7 @@ add_definitions(-DNAPI_VERSION=3)
 
 # helper stuff for Visual studio
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT twitch-addon)
-set_target_properties(twitch-addon PROPERTIES VS_DEBUGGER_COMMAND "C:\\Windows\\System32\\cmd" VS_DEBUGGER_COMMAND_ARGUMENTS "/c \"npm start\"" VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/../electron-quick-start")
+# with the approach below pdbs are not loaded since the debugger actually can't see what libraries are loaded due to the fact that the cmd process is detached
+#set_target_properties(twitch-addon PROPERTIES VS_DEBUGGER_COMMAND "C:\\Windows\\System32\\cmd" VS_DEBUGGER_COMMAND_ARGUMENTS "/c \"npm start\"" VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/../electron-quick-start")
+# this seems better but now node modules seem to be failing
+set_target_properties(twitch-addon PROPERTIES VS_DEBUGGER_COMMAND "node.exe" VS_DEBUGGER_COMMAND_ARGUMENTS "main.js" VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/../electron-quick-start")

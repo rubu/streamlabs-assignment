@@ -19,7 +19,7 @@
 
 1. what is the proper way to bundle stuff with cmake-js - does it support install command, can the build .node file be depoyled to the electron-quick-start folder in a nice way?
 2. what is the best way for debugging under visual studio - currently there is some visual studio relevant stuff in CMakeLists.txt under twitch-addon which effectively just attempts to debug npm start (but debbing cmd really does not seem the proper way), eventually just put a non cmake generated visual studio sln/vcproj in the `streamlabs-assignment` which references the `twitch-addon` project
-3. what is the proper way to work around library search paths without proper bundling while debugging? I added the `obs-studio-install/bin/64bit` to to path in visual studio with merge environment, but that again seems like a big hack
+3. what is the proper way to work around library search paths without proper bundling while debugging? I added the `obs-studio-install/bin/64bit` to to path in visual studio with merge environment, but that again seems like a big hack, but as soon as the dynamic dependencies come into play `npm run start` also seems to fail
 
 # Some general thoughts on electron vs cef directly
 1. much more robust visual studio workflow - the main cef process + all the subprocesses (renderer/gpu/...) can be debugged directly, it is easy to understand what is going wrong if something is not working (in comparison here, it took time to understand which dlls and why are not loaded)

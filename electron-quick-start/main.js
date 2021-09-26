@@ -1,7 +1,8 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+console.log(require.resolve('electron'))
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
-var ipc = require('electron').ipcMain
+
 // the addon should be bundled nicer
 const TwitchAddon = require('../twitch-addon/build/Debug/twitch-addon')
 
@@ -22,10 +23,10 @@ function createWindow() {
   // mainWindow.webContents.openDevTools()
 
   // setup ipc communication
-  ipc.on('getObsVersionString', function(event) {
+  ipcMain.on('getObsVersionString', function(event) {
     event.sender.send('obsVersionString', TwitchAddon.GetObsVersionString())
   })
-  ipc.on('startStreaming', function (event, data) {
+  ipcMain.on('startStreaming', function (event, data) {
     console:log(`received request to start streaming`)
   })
 }

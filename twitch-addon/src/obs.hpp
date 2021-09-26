@@ -6,8 +6,10 @@
 
 class Obs
 {
-public:
+private:
     Obs() = default;
+
+public:
     ~Obs();
 
  static  std::unique_ptr<Obs> Create();

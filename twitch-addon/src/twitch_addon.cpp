@@ -3,10 +3,6 @@
 #include <napi.h>
 #include <obs.h>
 
-#if defined(_WIN32) 
-#include <Windows.h>
-#endif
-
 class TwitchAddon : public Napi::ObjectWrap<TwitchAddon> {
 public:
     TwitchAddon(const Napi::CallbackInfo& callback_info);
@@ -28,7 +24,7 @@ TwitchAddon::TwitchAddon(const Napi::CallbackInfo& callback_info) : Napi::Object
 
 Napi::Object TwitchAddon::Init(Napi::Env env, Napi::Object exports) {
     obs_version_string_ = obs_get_version_string();
-    obs_ = std::make_unique<Obs>();
+    obs_ = Obs::Create();
     Napi::Function function = DefineClass(env, "TwitchAddon", {
         StaticMethod<&TwitchAddon::GetObsVersionString>("GetObsVersionString"),
     });
@@ -47,11 +43,3 @@ Napi::Object Init(Napi::Env env, Napi::Object exports) {
 }
 
 NODE_API_MODULE(twitch_addon, Init);
-
-#if defined(_WIN32) && 1
-BOOL WINAPI DllMain(HINSTANCE, DWORD, LPVOID)
-{
-    // just to check if we are being loaded
-    return TRUE;
-}
-#endif
