@@ -1,6 +1,6 @@
 # Layout #
 
-- `electron-quick-start` - submodule containing the electron quick start sample
+- `electron-quick-start` - folder containing the electron quick start sample plus the added changes
 - `obs-studio` - submodule for obs-studio
 - `obs-studio-build` - out of tree build of obs-studio
 - `obs-studio-dependencies` - contents of the dependencies2019.zip (https://obsproject.com/downloads/dependencies2019.zip) for obs build on windows
