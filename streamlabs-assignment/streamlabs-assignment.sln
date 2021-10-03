@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "streamlabs-assignment", "st
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "twitch-addon", "..\twitch-addon\build\twitch-addon.vcxproj", "{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "copy-runtime-files", "..\twitch-addon\build\copy-runtime-files.vcxproj", "{E31A3541-DE13-3AB6-9ADF-F92939725186}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -46,6 +48,18 @@ Global
 		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 		{E1A65C20-698D-3DD8-B143-3394E5C5C4AF}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.Debug|x64.ActiveCfg = Debug|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.Debug|x64.Build.0 = Debug|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.Debug|x86.ActiveCfg = Debug|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.Release|x64.ActiveCfg = Release|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.Release|x64.Build.0 = Release|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.Release|x86.ActiveCfg = Release|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{E31A3541-DE13-3AB6-9ADF-F92939725186}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

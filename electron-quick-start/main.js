@@ -3,7 +3,7 @@ const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
 // the addon should be bundled nicer
-const TwitchAddon = require('../twitch-addon/build/Debug/twitch-addon')
+const TwitchAddon = require('twitch-addon/twitch-addon')
 
 function createWindow() {
   // Create the browser window.
