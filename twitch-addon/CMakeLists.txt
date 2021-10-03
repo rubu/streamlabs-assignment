@@ -1,10 +1,13 @@
 # 3.13 is needed for the VS_DEBUGGER_COMMAND stuff
 cmake_minimum_required(VERSION 3.13)
 project(twitch-addon)
+set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES src/obs.hpp
     src/obs.cpp
     src/twitch_addon.cpp
+    src/unicode.hpp
+    src/unicode.cpp
 )
 
 include(../obs-studio-install/cmake/LibObs/LibObsConfig.cmake)
@@ -24,7 +27,12 @@ string(REPLACE "\"" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
 target_include_directories(twitch-addon PRIVATE ${NODE_ADDON_API_DIR})
 add_definitions(-DNAPI_VERSION=3)
 add_custom_command(TARGET twitch-addon POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy "$<TARGET_FILE:twitch-addon>" "${CMAKE_SOURCE_DIR}/../electron-quick-start/node_modules/twitch-addon/$<TARGET_FILE_NAME:twitch-addon>")
-add_custom_target(copy-runtime-files ALL COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/../obs-studio-install/bin/64bit" "${CMAKE_SOURCE_DIR}/../electron-quick-start/node_modules/twitch-addon")
+add_custom_target(copy-obs-runtime 
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/../obs-studio-install/bin/64bit" "${CMAKE_SOURCE_DIR}/../electron-quick-start/node_modules/twitch-addon"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/../obs-studio-install/data" "${CMAKE_SOURCE_DIR}/../electron-quick-start/node_modules/twitch-addon/data"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/../obs-studio-install/obs-plugins/64bit" "${CMAKE_SOURCE_DIR}/../electron-quick-start/node_modules/twitch-addon/obs-plugins"
+)
+
 
 # helper stuff for Visual studio
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT twitch-addon)

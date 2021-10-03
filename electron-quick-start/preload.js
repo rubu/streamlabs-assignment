@@ -20,8 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // ipc hooks
     ipc.on('obsVersionString', function (event, response) {
-        document.getElementById('obs-version').textContent = response.obsVersionString
+        document.getElementById('obs-version').textContent = response
     })
     ipc.send('getObsVersionString')
+    ipc.send('getVideoSources')
+    ipc.send('getAudioSources')
 
 })

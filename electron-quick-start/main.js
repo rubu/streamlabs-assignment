@@ -2,8 +2,8 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-// the addon should be bundled nicer
-const TwitchAddon = require('twitch-addon/twitch-addon')
+const TwitchAddon = require('twitch-addon/twitch-addon.node')
+let twitchAddon = new TwitchAddon.TwitchAddon()
 
 function createWindow() {
   // Create the browser window.
@@ -23,7 +23,7 @@ function createWindow() {
 
   // setup ipc communication
   ipcMain.on('getObsVersionString', function(event) {
-    event.sender.send('obsVersionString', TwitchAddon.GetObsVersionString())
+      event.sender.send('obsVersionString', twitchAddon.obsVersionString)
   })
   ipcMain.on('startStreaming', function (event, data) {
     console:log(`received request to start streaming`)

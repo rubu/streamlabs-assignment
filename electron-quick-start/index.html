@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Streamlabs Assignment</title>
     <style>
       #setup {
+        margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -20,7 +20,8 @@
     and OBS <span id="obs-version"></span>.
 
     <div id="setup">
-      <div>
+        <div>Twitch Server Url</div>
+        <input id="twitch-server-url" type="text"/>
         <div>Twitch Stream Key</div>
         <input id="twitch-stream-key" type="text"/>
         <div>Video Source</div>
@@ -29,7 +30,6 @@
         <div>Audio Source</div>
         <select>
         </select>
-      </div>
     </div>
     <input type="button" id="start-streaming" value="Start Streaming"/>
     <!-- You can also require other files to run in this process -->
